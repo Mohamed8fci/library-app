@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonRelLayout">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Add to CurrentlyReading"
+            android:id="@+id/btnCurReading"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp" />
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Add To Want to Read"
+            android:id="@+id/btnWantToRead"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btnCurReading"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Add To Already Read"
+            android:id="@+id/btnAlreadyRead"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btnWantToRead"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/ButtonRelLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstRelLayout">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/bookImage" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookName"
+                android:text="BookName"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_toRightOf="@+id/bookImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/bookImage"
+                android:text="Author Name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/authorName"
+                android:textStyle="italic"
+                android:layout_below="@+id/bookName"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pages"
+                android:id="@+id/bookPages"
+                android:layout_below="@+id/authorName"
+                android:layout_toRightOf="@+id/bookImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_below="@+id/firstRelLayout"
+            android:layout_margin="20dp"
+            android:id="@+id/bookDesc" />
+
+    </RelativeLayout>
+</RelativeLayout>
